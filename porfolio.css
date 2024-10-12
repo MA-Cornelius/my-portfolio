@@ -1,0 +1,449 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 90px;
+    font-family: "Inter", sans-serif;
+    background-color: #0f172A;
+}
+.myPortfolio{
+    display: flex
+}
+.left{
+    min-width: 42%;
+    width: 40%;
+    position: fixed;
+    height: 100%;
+    position: fixed;
+    padding-left: 96px;
+    align-items: center;
+    text-align: left;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.left .aboutDev h1{
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+.left .aboutDev h2{
+    color:#e2e8f0;
+    margin-top: 0px;
+    font-weight: 500;
+    font-size: 23px;
+}
+.left .aboutDev p{
+    color: #94a3b8;
+    width: 320px;
+    height: 48px;
+    margin-top: 16px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    line-height: 24px;
+}
+nav{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+nav a{
+    font-size:16px;
+    text-decoration: none;
+    color: #94a3b8;
+}
+nav a:hover{
+    color: #e2e8f0;
+}
+nav hr{
+    height: 0px;
+    width: 64px;
+    color: #64748b;
+    margin: 0;
+    padding: 0;
+}
+.line{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 12px 0;
+}
+.line a{
+    font-size: 12px;
+    font-weight: 700;
+}
+.line hr{
+    margin-right: 16px;
+    height:0;
+    color: #94a3b8;
+}
+.mySocials{
+    margin-top: 32px;
+}
+.mySocials img{
+    width: 23px;
+    margin-right: 15px;
+    filter: brightness(0) saturate(100%) invert(68%) sepia(5%) saturate(1010%) hue-rotate(176deg) brightness(92%) contrast(99%);
+}
+.mySocials img:hover{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(43%) saturate(0%) hue-rotate(133deg) brightness(107%) contrast(101%);
+}
+.right{
+    min-width: 46%;
+    width: 46%;
+    height: auto;
+    position: absolute;
+    right: 50px;
+    margin-bottom: 30px;
+}
+.right .aboutMe p{
+    color: #94a3b8;
+    width: 495px;
+    margin-left: 16px;
+    font-size: 16px;
+    text-align: start;
+    line-height: 26px;
+}
+.right .aboutMe p:nth-of-type(3){
+    margin-bottom: 127px;
+}
+.right .aboutMe a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.right .aboutMe a:hover{
+    color: #5eead4;
+}
+.right .experience{
+    display: flex;
+    padding-left: 16px;
+    margin-bottom: 15px;
+    padding: 16px 24px;
+    margin-top: 5px;
+    align-items: top;
+}
+.right .experience:hover{
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #94a3b81b;
+}
+.right .experience .duration h4{
+    width: 120px;
+    font-size:12px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-top: 2.5px;
+}
+.right .jobDescription {
+    width: 530px;
+}
+.right .jobDescription .role{
+    width: 320px;
+    font-size: 15.5px;
+    font-weight: 500;
+    text-align: left;
+    color: #e2e8f0;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(4029%) hue-rotate(294deg) brightness(102%) contrast(100%);
+    line-height: 20px;
+}
+.right .jobDescription .role:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.right .jobDescription .role img{
+    width: 23px;
+    align-content: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.right .jobDescription .jobDetails p{
+    color: #94a3b8;
+    width: 375px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.right .jobDescription .jobDetails .framework ul{
+    display: flex;
+    align-items: left;
+    margin-left: -40px;
+}
+.right .jobDescription .subRole{
+    color: #94a3b8;
+    line-height: 22px;
+}
+.right .jobDescription .jobDetails .framework li{
+    overflow: hidden;
+    list-style: none;
+    border: 0 solid transparent;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-right: 3px;
+    align-content:center;
+    text-align: center;
+    background-color:#5fbcac21;
+}
+.right .jobDescription .framework li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5eead5dc;
+    text-align: center;
+    align-items: center;
+}
+.framework2 ul{
+    list-style: none;
+    margin-left: -40px;
+}
+.framework2 li{
+    display: inline-block;
+    overflow: hidden;
+    list-style: none;
+    border: 0 solid transparent;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-right: 3px;
+    align-content:center;
+    text-align: center;
+    background-color:#5fbcac21;
+}
+.framework2 a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5eead5dc;
+    text-align: center;
+    align-items: center;
+}
+.jobDescription .jobDetails .workLinks ul{
+    list-style: none;
+    margin-left: -37px;
+}
+.jobDescription .jobDetails .workLinks li{
+    display: inline-block;
+    margin-right: 10px;
+    align-content: center;
+    text-align: text;
+}
+.jobDescription .jobDetails .workLinks li:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.jobDescription .jobDetails .workLinks a{
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.jobDescription .jobDetails .workLinks img{
+    width: 15px;
+    margin-right: 5px;
+}
+.right .moreResume {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.right .moreResume p{
+    color: #e2e8f0;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.right .moreResume p:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.right .moreResume img{
+    width: 24px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.right .projects{
+    border-radius: 10px;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    align-items: top;
+    padding: 16px 20px;
+    margin-top: 5px;
+}
+.right .projects:hover{
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #94a3b81b;
+}
+.right .projects .projectImg img{
+    width: 110px;
+    align-items: top;
+}
+.projects .projectDetails{
+    margin-top: -10px;
+    margin-left: 10px;
+    align-items: top;
+}
+.projects .projectDetails img{
+    width: 24px;
+}
+.projects .projectDetails h1{
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e2e8f0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.projects .projectDetails h1:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.projects .projectDetails p{
+    color: #94a3b8;
+    width: 375px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.projects .projectDetails .framework ul{
+    list-style: none;
+    margin-left: -40px;
+}
+.projects .projectDetails .framework  li{
+    display: inline-block;
+    overflow: hidden;
+    list-style: none;
+    border: 0 solid transparent;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-right: 3px;
+    align-content:center;
+    text-align: center;
+    background-color:#5fbcac21;
+}
+.projects .projectDetails .framework  a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5eead5dc;
+    text-align: center;
+    align-items: center;
+}
+.projects .rating{
+    font-weight: 500;
+    font-size: 14px;
+    color:#e2e8f0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+    
+}
+.projects .rating:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.projects .rating img{
+    width: 15px;
+}
+.projects .rating span{
+    display: inline-block;
+    margin-right: 10px;
+    align-content: center;
+    text-align: text;
+}
+.projectDetails .install{
+    font-weight: 500;
+    font-size: 14px;
+    color:#e2e8f0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.projectDetails .install:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.moreProject{
+    margin-top: 25px;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color:#e2e8f0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.moreProject:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.moreProject img{
+    width: 15px;
+    margin-left: 5px;
+}
+.previousProjects{
+    display: inline-flex;
+    padding-left: 16px;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+
+.previousProjects:hover{
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #94a3b81b;
+    padding: 16px 24px;
+}
+.previousProjects .algolia p{
+    font-weight: 700;
+    font-size: 16px;
+    color: #64748b;
+    margin-top: 0;
+}
+.previousProjects .algolia h2{
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 18px;
+    width: 400px;
+    margin-top: 0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.previousProjects .algolia h2:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.previousProjects .mobileAppCms p{
+    font-weight: 700;
+    font-size: 16px;
+    color: #64748b;
+    margin-top: 0;
+}
+.previousProjects .mobileAppCms h2{
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 18px;
+    width: 400px;
+    margin-top: 0;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.previousProjects .mobileAppCms h2:hover{
+    color: #5eead4;
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+.fullFramework p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748b;
+    line-height: 22px;
+    width: 500px;
+    padding-left: 20px;
+}
+.fullFramework a{
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 700;
+}
+.fullFramework a:hover{
+    color: #5eead4;
+}
