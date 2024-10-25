@@ -6,10 +6,44 @@ body{
     font-family: "Inter", sans-serif;
     background-color: #0f172A;
 }
+
+.cursor-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(226, 232, 240, 0.05) 0%,
+        rgba(226, 232, 240, 0.04) 20%,
+        rgba(226, 232, 240, 0.02) 40%,
+        rgba(226, 232, 240, 0.01) 60%,
+        rgba(226, 232, 240, 0.005) 80%,
+        rgba(226, 232, 240, 0) 95%    /* Extended gradient closer to edge */
+    );
+        transition: transform 0.10s ease;
+}
+.hover-effect{
+    border: 1px none transparent; 
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #94a3b81b;
+    transition: none 0.9s ease;
+    color: #5eead4;
+}
+.text-hover{
+    color: #5eead4;
+}
+.image-hover{
+    transform: translateY(-5px);
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
 .myPortfolio{
     display: flex
 }
-.left{
+.header{
     min-width: 42%;
     width: 40%;
     position: fixed;
@@ -22,62 +56,67 @@ body{
     margin-bottom: 30px;
 }
 
-.left .aboutDev h1{
+.header .aboutDev h1{
     color: #e2e8f0;
+    font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 48px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
-.left .aboutDev h2{
+.header .aboutDev h2{
     color:#e2e8f0;
     margin-top: 0px;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 23px;
 }
-.left .aboutDev p{
+.header .aboutDev p{
     color: #94a3b8;
     width: 320px;
     height: 48px;
     margin-top: 16px;
-    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
     margin-top: 5px;
     margin-bottom: 50px;
     line-height: 24px;
 }
 nav{
-    display: block;
+    display: inline-block;
+    margin: 0;
     align-items: center;
     text-align: center;
 }
+.line{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    color:#94a3b8;
+}
+
 nav a{
-    font-size:16px;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     text-decoration: none;
     color: #94a3b8;
+    letter-spacing: 1px;
 }
 nav a:hover{
     color: #e2e8f0;
 }
 nav hr{
     height: 0px;
-    width: 64px;
-    color: #64748b;
+    width: 32px;
+    color:#94a3b8;
     margin: 0;
     padding: 0;
-}
-.line{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 12px 0;
-}
-.line a{
-    font-size: 12px;
-    font-weight: 700;
-}
-.line hr{
     margin-right: 16px;
-    height:0;
-    color: #94a3b8;
+}
+nav hr:hover{
+    width: 65px;
+    transition-duration: 1000ms;
 }
 .mySocials{
     margin-top: 32px;
@@ -95,14 +134,17 @@ nav hr{
     width: 46%;
     height: auto;
     position: absolute;
-    right: 50px;
+    right: 45px;
+    margin-top:25px ;
     margin-bottom: 30px;
 }
 .right .aboutMe p{
     color: #94a3b8;
-    width: 495px;
+    width: 580px;
     margin-left: 16px;
-    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
     text-align: start;
     line-height: 26px;
 }
@@ -122,33 +164,55 @@ nav hr{
     margin-bottom: 15px;
     padding: 16px 24px;
     margin-top: 5px;
-    align-items: top;
+    align-items: top; 
+    transition: none 0.9s ease;
 }
-.right .experience:hover{
-    border: 1px solid transparent;
+
+.experience:hover{
+    border: 1px none transparent;
     overflow: hidden;
     border-radius: 10px;
     background-color: #94a3b81b;
+    transition: none 0.9s ease;
 }
+.experience:hover h3{
+    color: #5eead4;
+}
+.experience :hover img {
+    transform: translateY(-5px);
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+}
+
+
 .right .experience .duration h4{
+    letter-spacing: 1px;
     width: 120px;
+    font-family: "Inter", sans-serif;
     font-size:12px;
     text-transform: uppercase;
     color: #94a3b8;
     font-weight: 600;
     margin-top: 2.5px;
+    margin-right: 30px;
 }
 .right .jobDescription {
     width: 530px;
 }
+.right .jobDescription .role h3{
+    margin-top: -2.5px;
+}
 .right .jobDescription .role{
-    width: 320px;
-    font-size: 15.5px;
+    margin-top: -2.5px;
+    width: 400px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     text-align: left;
     color: #e2e8f0;
     filter: brightness(0) saturate(100%) invert(91%) sepia(0%) saturate(4029%) hue-rotate(294deg) brightness(102%) contrast(100%);
     line-height: 20px;
+    margin-bottom: 0;
+    transition: none 0.3s ease;
 }
 .right .jobDescription .role:hover{
     color: #5eead4;
@@ -156,15 +220,23 @@ nav hr{
 }
 .right .jobDescription .role img{
     width: 23px;
+    margin-left: 5px;
     align-content: center;
-    display: inline-block;
+    display: inline-flex;
     vertical-align: middle;
+    margin-bottom: 0;
+    transition: transform 0.3s ease;
 }
+/* .right .jobDescription .role img:hover{
+    transform: translateY(-5px);
+    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+} */
 .right .jobDescription .jobDetails p{
     color: #94a3b8;
-    width: 375px;
+    width: 400px;
     line-height: 22px;
-    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
     font-weight: 500;
 }
 .right .jobDescription .jobDetails .framework ul{
@@ -172,9 +244,13 @@ nav hr{
     align-items: left;
     margin-left: -40px;
 }
-.right .jobDescription .subRole{
+.right .jobDescription .subRole h2{
     color: #94a3b8;
-    line-height: 22px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 0;
 }
 .right .jobDescription .jobDetails .framework li{
     overflow: hidden;
@@ -189,6 +265,7 @@ nav hr{
 }
 .right .jobDescription .framework li a{
     text-decoration: none;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #5eead5dc;
@@ -213,6 +290,7 @@ nav hr{
 }
 .framework2 a{
     text-decoration: none;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #5eead5dc;
@@ -236,6 +314,7 @@ nav hr{
 .jobDescription .jobDetails .workLinks a{
     text-decoration: none;
     color: #e2e8f0;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
 }
@@ -250,16 +329,22 @@ nav hr{
 .right .moreResume p{
     color: #e2e8f0;
     margin-left: 20px;
+    font-family: "Inter", sans-serif;
     font-size: 17px;
     font-weight: 700;
+    display: flex;
 }
 .right .moreResume p:hover{
     color: #5eead4;
     filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
 }
 .right .moreResume img{
-    width: 24px;
+    margin-left: 5px;
+    width: 22px;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+}
+.right .moreResume p:hover img{
+    transform: translateY(-5px);
 }
 .right .projects{
     border-radius: 10px;
@@ -267,30 +352,36 @@ nav hr{
     align-items: left;
     text-align: left;
     align-items: top;
-    padding: 16px 20px;
+    padding: 20px 20px;
     margin-top: 5px;
 }
 .right .projects:hover{
-    border: 1px solid transparent;
+    border: 1px none transparent;
     overflow: hidden;
     border-radius: 10px;
     background-color: #94a3b81b;
+    transition: 1000ms;
 }
 .right .projects .projectImg img{
     width: 110px;
     align-items: top;
 }
 .projects .projectDetails{
-    margin-top: -10px;
-    margin-left: 10px;
+    margin-top: -15px;
+    margin-left: 40px;
     align-items: top;
+}
+.projects .projectDetails h1{
+    display: flex;
 }
 .projects .projectDetails img{
     width: 24px;
+    margin-left: 10px;
 }
 .projects .projectDetails h1{
     align-items: center;
     text-align: left;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #e2e8f0;
@@ -304,7 +395,8 @@ nav hr{
     color: #94a3b8;
     width: 375px;
     line-height: 22px;
-    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
     font-weight: 500;
 }
 .projects .projectDetails .framework ul{
@@ -325,6 +417,7 @@ nav hr{
 }
 .projects .projectDetails .framework  a{
     text-decoration: none;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #5eead5dc;
@@ -332,27 +425,35 @@ nav hr{
     align-items: center;
 }
 .projects .rating{
+    display: flex;
+    align-items: left;
     font-weight: 500;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     color:#e2e8f0;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
-    
+    width: fit-content;
 }
 .projects .rating:hover{
     color: #5eead4;
     filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
 }
 .projects .rating img{
-    width: 15px;
+    width: 13px;
+    margin: 0 5px 0 0;
 }
 .projects .rating span{
     display: inline-block;
     margin-right: 10px;
     align-content: center;
     text-align: text;
+    font-weight: 500;
+    font-size: 16px;
 }
 .projectDetails .install{
+    display: flex;
     font-weight: 500;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     color:#e2e8f0;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
@@ -361,77 +462,125 @@ nav hr{
     color: #5eead4;
     filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
 }
+.projects .install img{
+    margin: 0 5px 0 0;
+}
+.projects .install span{
+    display: inline-block;
+    margin-right: 10px;
+    align-content: center;
+    text-align: text;
+    font-weight: 500;
+    font-size: 16px;
+}
 .moreProject{
     margin-top: 25px;
-    margin-bottom: 100px;
-    padding-left: 20px;
+    margin-bottom: 150px;
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 700;
     color:#e2e8f0;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
 }
 .moreProject:hover{
-    color: #5eead4;
-    filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
+    /* text-decoration: underline; */
+    /* text-decoration-line: underline;
+    text-decoration-color: #5eead4; */
+    border-bottom: 1px solid #000000;
+    text-underline-offset: 5px;
+    width: fit-content;
 }
 .moreProject img{
     width: 15px;
     margin-left: 5px;
 }
+.moreProject:hover img{
+    transform: translateX(5px);
+}
 .previousProjects{
     display: inline-flex;
-    padding-left: 16px;
+    padding: 16px 24px;
     gap: 16px;
     justify-content: center;
-    margin-bottom: 15px;
-
+    margin-bottom: 10px;
 }
-
 .previousProjects:hover{
-    border: 1px solid transparent;
+    border: 1px none transparent;
     overflow: hidden;
     border-radius: 10px;
     background-color: #94a3b81b;
-    padding: 16px 24px;
+    transition: 1000ms;
 }
 .previousProjects .algolia p{
     font-weight: 700;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     color: #64748b;
     margin-top: 0;
+    margin-bottom: 0;
 }
-.previousProjects .algolia h2{
+.previousProjects .algolia h1{
     color: #e2e8f0;
     font-weight: 500;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     width: 400px;
     margin-top: 0;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+    align-items: center;
+    gap: 0;
 }
-.previousProjects .algolia h2:hover{
+.previousProjects .algolia img{
+    width: 23px;
+    margin-left: 5px;
+    align-content: center;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.previousProjects .algolia h1:hover{
     color: #5eead4;
     filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
 }
 .previousProjects .mobileAppCms p{
     font-weight: 700;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     color: #64748b;
     margin-top: 0;
+    margin-bottom: 0;
 }
-.previousProjects .mobileAppCms h2{
+.previousProjects .mobileAppCms h1{
     color: #e2e8f0;
     font-weight: 500;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     width: 400px;
     margin-top: 0;
     filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(5274%) hue-rotate(179deg) brightness(113%) contrast(88%);
+    align-items: center;
+    gap: 0;
+    line-height: normal;
 }
-.previousProjects .mobileAppCms h2:hover{
+.previousProjects .mobileAppCms h1:hover{
     color: #5eead4;
     filter:brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(6839%) hue-rotate(149deg) brightness(92%) contrast(90%);
 }
+.previousProjects .mobileAppCms img{
+    width: 23px;
+    margin-left: 5px;
+    align-content: center;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.previousProjects:nth-last-of-type(2){
+    margin-bottom: 150px;
+}
 .fullFramework p{
     font-size: 16px;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #64748b;
     line-height: 22px;
@@ -441,9 +590,23 @@ nav hr{
 .fullFramework a{
     text-decoration: none;
     color: #94a3b8;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 700;
 }
 .fullFramework a:hover{
     color: #5eead4;
+}
+.rotate-animation img{
+    margin-left: 510px;
+    padding: 0;
+    animation-duration: 1000ms;
+}
+.rotate-animation img:hover{
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+}
+.navigation{
+    width: 65px;
+    transition-duration: 1000ms;
 }
